@@ -5,7 +5,7 @@
     ID: string;
     NewConfirmed: number;
     NewDeaths: number;
-    NewRecoverd: number;
+    NewRecovered: number;
     Premium: unknown;
     Slug: string;
     TotalConfirmed: number;
