@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 
 interface Props {
     countries: Country[];
+    onItemClick: (country: Country) => void;
 }
 
 const ListWrapper = styled.ul`
@@ -27,11 +28,11 @@ const ListContent = styled.div`
 `
 
 
-const CountryList: React.FunctionComponent<Props> = ({countries}) => {
+const CountryList: React.FunctionComponent<Props> = ({countries, onItemClick}) => {
     return (
         <ListWrapper>
             {countries.map((country) => (
-                <ListItem key = {country.ID}>
+                <ListItem key = {country.ID} onClick= {() => {onItemClick(country)}}>
                     {country.Country}
                     <ListContent>
                     <h4>{country.Country}</h4>
